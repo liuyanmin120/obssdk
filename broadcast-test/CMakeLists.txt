@@ -70,6 +70,8 @@ target_link_libraries(broadcast-test
 
 set( ENV{PATH} ${QTDIR} )
 
+install_obs_core(${PROJECT_NAME})
+
 if(APPLE)
 	set_property(
 	TARGET ${PROJECT_NAME}
@@ -78,5 +80,4 @@ if(APPLE)
 	"."
 	"../Frameworks"
 	"${Qt5Widgets_DIR}/../../")
-	install_obs_core(${PROJECT_NAME})
 endif()
